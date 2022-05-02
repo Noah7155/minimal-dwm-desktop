@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cd ~
+
 echo "generating directories and files..."
 
 mkdir --parents ~/.config/kitty
@@ -33,6 +35,10 @@ echo "cloning emacs-files..."
 
 git clone https://github.com/Dragonflame7155/emacs-files.git
 
+echo "cloning dotfiles..."
+
+git clone https://github.com/Dragonflame7155/dotfiles.git
+
 echo "unpacking dwm-6.3..."
 
 tar -xvf dwm-6.3.tar.gz
@@ -47,8 +53,10 @@ mv ~/config-files-dump/kitty.conf ~/.config/kitty/
 
 cp ~/minimal-dwm-desktop/xinitrc ~/.xinitrc
 
+cp ~/dotfiles/.zshrc ~/.zshrc
+
 cd dwm-6.3
 
-sudo make install
+sudo make install &&
 
 startx

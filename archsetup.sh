@@ -57,6 +57,8 @@ cp ~/dotfiles/.zshrc ~/.zshrc
 
 cd dwm-6.3
 
+emacs dwm.c
+
 sudo make install &&
 
 startx

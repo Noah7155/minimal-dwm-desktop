@@ -9,7 +9,7 @@ touch ~/.xinitrc
 
 echo "gathering packages..."
 
-sudo pacman -Syu zsh xorg xorg-xinit neofetch picom dmenu kitty nitrogen emacs dwm
+sudo pacman -Syu git zsh xorg xorg-xinit neofetch picom dmenu kitty nitrogen emacs dwm
 
 echo "collecting dwm-6.3.tar.gz..."
 
@@ -39,7 +39,7 @@ tar -xvf dwm-6.3.tar.gz
 
 cd dwm-6.3
 
-mv ~/minimal-dwm-desktop/config.h .
+cp ~/minimal-dwm-desktop/config.h ~/dwm-6.3/config.h
 
 cd ..
 
